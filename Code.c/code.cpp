@@ -56,9 +56,11 @@ class bank{
     };
 int main(){
     bank bankacc;
+    char again;
     int choice;
     int pass;
     int password;
+    do{
     cout << "---------Welcome to our bank----------" << endl;
     cout << "Please select the option" << endl;
     cout << "1.Check the balance" <<endl;
@@ -99,4 +101,9 @@ int main(){
             cout << "You have entered wrong password !" << endl;
         }
     }   
+    cout << "Do you want to do again?" << endl;
+    cout <<"Then press A" << endl;
+    cin >> again;}
+    while(again == 'a');
+
 }

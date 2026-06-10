@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+int abc;
 int choice = 0;
 char name [20] = "";
 int birthyear = 0;
