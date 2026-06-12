@@ -60,22 +60,22 @@ printf("\nWELCOME TO AGE CALCULATOR!");
 printf("\nEnter your name :");
 scanf("%s" , name);
 
-printf("Enter your year of birth :");
+printf("Enter your year of birth :\n");
 scanf("%d" , &birthyear);
 
-printf("Enter your month of birth :");
+printf("Enter your month of birth :\n");
 scanf("%d" , &birthmonth);
 
-printf("Enter your date of birth :" );
+printf("Enter your date of birth :\n" );
 scanf("%d" , &birthdate);
 
-printf("Enter current year :");
+printf("Enter current year :\n");
 scanf("%d" , &currentyear);
 
-printf("Enter current month :");
+printf("Enter current month :\n");
 scanf("%d" , &currentmonth);
 
-printf("Enter current date :");
+printf("Enter current date :\n");
 scanf("%d" , &currentdate);
 
 if(currentdate<birthdate){
@@ -101,13 +101,13 @@ printf("\nWELCOME TO CUTOFF CALCULATOR!");
 printf("\nENTER YOUR NAME :");
 scanf("%s" , &name );
 
-printf("ENTER YOUR MATHS MARK :");
+printf("ENTER YOUR MATHS MARK :\n");
 scanf("%f" , &maths); 
 
-printf("ENTER YOUR PHYSICS MARK :");
+printf("ENTER YOUR PHYSICS MARK :\n");
 scanf("%f" , &physics); 
 
-printf("ENTER YOUR CHEMISTRY MARK :");
+printf("ENTER YOUR CHEMISTRY MARK :\n");
 scanf("%f" , &chemistry); 
 
 cutoff = maths+(physics+chemistry)/2;
@@ -161,13 +161,13 @@ else if(choice == 4){
 
 printf("WELCOME TO SIMPLE CALCULATOR \n");
 
-printf("ENTER THE FIRST NUMBER :");
+printf("ENTER THE FIRST NUMBER :\n");
 scanf(" %lf" , &x);
 
-printf("ENTER THE OPERATOR :");
+printf("ENTER THE OPERATOR :\n");
 scanf(" %c" , &operator);
 
-printf("ENTER THE SECOND NUMBER :");
+printf("ENTER THE SECOND NUMBER :\n");
 scanf(" %lf" , &y);
 
 switch(operator){
