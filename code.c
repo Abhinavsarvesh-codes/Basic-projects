@@ -3,6 +3,8 @@
 #include<stdlib.h>
 #include<time.h>
 int abc;
+int n = 0;
+int N =0;
 int choice = 0;
 char name [20] = "";
 int birthyear = 0;
@@ -15,6 +17,7 @@ int currentdate = 0;
 int ageyear = 0;
 int agemonth = 0;
 int agedate = 0;
+int times = 0;
 float maths = 0;
 float physics = 0;
 float chemistry = 0;
@@ -27,11 +30,68 @@ char verb [50] = "";
 char noun2 [50] = "";
 char noun3 [50] = "";
 int guess;
+int M = 0;
+int rem =0;
+int sum=0;
+int m = 0;
+int f = 0;
+int digits = 0 ;
+int reverse = 0;
 char operator ;
 double x=0.0;
 double y=0.0;
 double z=0.0;
 
+char* checkEvenOrOdd(int N) {
+    if(N%2==0){
+           return "even";      
+    }
+    else {
+           return "odd";
+    }
+}
+char* checkSign(int M) {
+    if(M>0){
+        return "Positive";
+    }
+    else if(M<0){
+        return "Negative" ;
+    }
+    else{
+        return "Neutral";
+    }
+}
+ int sumOfDigits(int n) {
+    while(n!=0){
+     rem  = n%10;
+    sum +=  rem;
+    n/=10;
+    }
+    return sum;
+     
+}
+int countDigits(int m) {
+
+    if(m == 0){
+        return 1;
+    }
+    else{
+        while(m!=0){
+            times++;
+            m/=10;
+        }
+        return times;
+    }
+
+}
+int reverseNumber(int f) {
+    while(f!=0){
+        digits = f%10;
+        reverse = reverse*10+digits;
+        f/=10;
+    }
+    return reverse;
+}
 int main(){
 int num = rand()%100+1;
 ABHINAVSARVESH:
@@ -51,6 +111,16 @@ printf("3.STORY\n");
 printf("4.SIMPLE CALCULATOR\n");
 
 printf("5.NUMBER GUESSING GAME\n");
+
+printf("6.CHECK ODD OR EVEN\n");
+
+printf("7.CHECK WHETHER POSITIVE OR NEGATIVE\n");
+
+printf("8.SUM THE DIGITS OF A VALUE\n");
+
+printf("9.TO COUNT THE DIGITS OF A VALUE\n");
+
+printf("10.TO REVERSE A NUMBER\n");
 
 scanf("%d" ,&choice );
 
@@ -217,15 +287,37 @@ printf("It's high\n");
 while(num != guess);
 
 }
-
-
+else if(choice == 6){
+    printf("Enter a number :");
+    scanf("%d", &N);
+    printf("%s", checkEvenOrOdd(N));
+}
+else if(choice == 7){
+    printf("Enter a number :");
+    scanf("%d", &M);
+    printf("%s", checkSign(M));
+}
+else if(choice == 8){
+    printf("Enter a number :");
+    scanf("%d", &n);
+    printf("%d", sumOfDigits(n));
+}
+else if(choice == 9){
+    printf("Enter a number :");
+    scanf("%d", &m);
+    printf("%d", countDigits(m));
+}
+else if(choice == 10){
+    printf("Enter a number :");
+    scanf("%d", &f);
+    printf("%d", reverseNumber(f));
+}
 printf("\nDO YOU WANT TO USE IT AGAIN ? THEN ENTER 0 :");
 scanf("%d",&again);
 if(again == 0){
 goto ABHINAVSARVESH;
 }
 printf("\nTHANK YOU !");
-printf("Hi");
 return 0; 
 
 }
