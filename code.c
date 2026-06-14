@@ -225,6 +225,7 @@ if(again == 0){
 goto ABHINAVSARVESH;
 }
 printf("\nTHANK YOU !");
+printf("Hi");
 return 0; 
 
 }
