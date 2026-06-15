@@ -125,6 +125,7 @@ printf("10.TO REVERSE A NUMBER\n");
 scanf("%d" ,&choice );
 
 if(choice == 1 ){
+    //AGE CALCULATOR PROGRAM
 printf("\nWELCOME TO AGE CALCULATOR!");
 
 printf("\nEnter your name :");
@@ -164,7 +165,7 @@ ageyear = currentyear-birthyear;
 printf("\n%s your age is %d years %d months %d days!" , name, ageyear , agemonth , agedate );
 
 }
-
+// CUTOFF CALCULATOR PROGRAM
 else if(choice == 2){
 
 printf("\nWELCOME TO CUTOFF CALCULATOR!");
@@ -192,7 +193,7 @@ printf("YOUR CUTOFF = %.1f\n", cutoff );
 
 }
 else if(choice == 3){
-
+    // STORY WRITING PROGRAM
 printf("\nWELCOME TO STORY CREATOR!");
 printf("\nENTER A NOUN (A NAME OF A PERSON (MALE) ) : ");
 scanf("%s" , noun1 );
@@ -228,7 +229,7 @@ printf("SO THE KING WAS AMAZED!");
 }
 
 else if(choice == 4){
-
+// SIMPLE CALCULATOR PROGRAM
 printf("WELCOME TO SIMPLE CALCULATOR \n");
 
 printf("ENTER THE FIRST NUMBER :\n");
@@ -264,6 +265,7 @@ printf("%.1lf %c %.1lf = %.1lf" , x , operator , y , z);
 
 }
 else if(choice == 5){
+    // NUMBER GUESSING GAME
 srand(time(0));
  
 printf("=======Welcome to number guessing game==========\n");
@@ -288,26 +290,31 @@ while(num != guess);
 
 }
 else if(choice == 6){
+    // CHECK ODD OR EVEN
     printf("Enter a number :");
     scanf("%d", &N);
     printf("%s", checkEvenOrOdd(N));
 }
 else if(choice == 7){
+    // CHECK POSITIVE OR NEGATIVE
     printf("Enter a number :");
     scanf("%d", &M);
     printf("%s", checkSign(M));
 }
 else if(choice == 8){
+    // ADD THE DIGITS IN A VALUE
     printf("Enter a number :");
     scanf("%d", &n);
     printf("%d", sumOfDigits(n));
 }
 else if(choice == 9){
+    // COUNT THE NUMBERS IN A VALUE
     printf("Enter a number :");
     scanf("%d", &m);
     printf("%d", countDigits(m));
 }
 else if(choice == 10){
+    // REVERSE THE NUMBER
     printf("Enter a number :");
     scanf("%d", &f);
     printf("%d", reverseNumber(f));
