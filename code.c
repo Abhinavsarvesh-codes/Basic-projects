@@ -2,6 +2,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
+#include<stdbool.h>
 int abc;
 int n = 0;
 int N =0;
@@ -41,6 +42,15 @@ char operator ;
 double x=0.0;
 double y=0.0;
 double z=0.0;
+int o=0;
+int p=1;
+int K =0;
+int v =0;
+int s;
+int l;
+int j;
+bool result;
+
 
 char* checkEvenOrOdd(int N) {
     if(N%2==0){
@@ -92,6 +102,49 @@ int reverseNumber(int f) {
     }
     return reverse;
 }
+int fibonacci(int n) {
+if(n == 0) return 0;
+for(int i=2;i<=n;i++){
+int result = o+p;
+o = p;
+p = result ;
+}
+return p;         
+}
+bool isPerfectNumber(int K) {
+    if(K<=1)  return false;
+    int add = 0 ;
+    for(int a; a<K; a++){
+        if(n%a==0){
+            add+=a;
+        }
+    }return add == K ;   
+}
+
+int factorial(int v) {
+    if(v==0) return 1;
+    int fact = 1;
+     for(int i = 2;i<=n;i++){
+       fact *=i;
+     }
+     return fact;
+    }
+    bool isPrime(int s) {
+    // write your solution below
+    if(s<=1) return false;
+    for(int i=2;i<n;i++){
+        if(s%i==0)
+            return false;
+        
+    }return true;
+}
+int squareRoot(int l) {
+    
+ for(int i=1;i*i<=l;i++){
+ j = i;
+}
+    return j;
+}
 int main(){
 int num = rand()%100+1;
 ABHINAVSARVESH:
@@ -121,6 +174,16 @@ printf("8.SUM THE DIGITS OF A VALUE\n");
 printf("9.TO COUNT THE DIGITS OF A VALUE\n");
 
 printf("10.TO REVERSE A NUMBER\n");
+
+printf("11.FIBONACCI NUMBER\n");
+
+printf("12.PERFECT NUMBER\n");
+
+printf("13.FACTORIAL\n");
+
+printf("14.PRIME NUMBER\n");
+
+printf("15.SQUARE ROOT\n");
 
 scanf("%d" ,&choice );
 
@@ -216,7 +279,7 @@ scanf("%s" , adjective3 );
 printf("\nENTER A VERB : ");
 scanf("%s" , verb );
 
-printf("\n ONCE A %s KING NAMED %s  LIVED IN HIS KINGDOM . \n" , adjective1 , noun1);
+printf("\n ONCE A %s KING NAMED %s LIVED IN HIS KINGDOM . \n" , adjective1 , noun1);
 
 printf("HIS KINGDOM WAS LOCATED IN %s %s.\n ", adjective3 , noun3);
 
@@ -319,6 +382,33 @@ else if(choice == 10){
     scanf("%d", &f);
     printf("%d", reverseNumber(f));
 }
+else if(choice == 11){
+    printf("Enter a number :");
+  if (scanf("%d", &n) != 1) return 0;
+    printf("%d", fibonacci(n));
+}
+else if(choice == 12){
+    printf("Enter a number :");
+    scanf("%d", &K);
+    result = isPerfectNumber(K);
+    printf(result ? "True" : "False");
+}
+else if(choice == 13){
+    printf("Enter a number :");
+    scanf("%d", &v);
+    printf("%d", factorial(v));
+}
+else if(choice == 14){
+    printf("Enter a number :");
+    scanf("%d", &s);
+    printf("%s\n", isPrime(s) ? "True" : "False");
+}
+else if(choice == 15){
+    printf("Enter a number :");
+    scanf("%d", &l);
+    printf("%d", squareRoot(l));
+}
+
 printf("\nDO YOU WANT TO USE IT AGAIN ? THEN ENTER 0 :");
 scanf("%d",&again);
 if(again == 0){
