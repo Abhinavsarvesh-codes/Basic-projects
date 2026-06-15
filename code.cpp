@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+// A SIMPLE BANK ATM PROGRAM
 class bank{
         private:
         int balance = 10000;
