@@ -46,9 +46,13 @@ int o=0;
 int p=1;
 int K =0;
 int v =0;
-int s;
-int l;
-int j;
+int s = 0;
+int l=0;
+int j=0;
+float units = 0;
+float newunit = 0;
+float oldreading =2313;
+float newreading = 0;
 bool result;
 
 
@@ -114,7 +118,7 @@ return p;
 bool isPerfectNumber(int K) {
     if(K<=1)  return false;
     int add = 0 ;
-    for(int a; a<K; a++){
+    for(int a = 1; a<K; a++){
         if(n%a==0){
             add+=a;
         }
@@ -126,11 +130,11 @@ int factorial(int v) {
     int fact = 1;
      for(int i = 2;i<=n;i++){
        fact *=i;
+       return fact;
      }
-     return fact;
+     
     }
     bool isPrime(int s) {
-    // write your solution below
     if(s<=1) return false;
     for(int i=2;i<n;i++){
         if(s%i==0)
@@ -184,6 +188,8 @@ printf("13.FACTORIAL\n");
 printf("14.PRIME NUMBER\n");
 
 printf("15.SQUARE ROOT\n");
+
+printf("16.EB BILL GENERATOR \n");
 
 scanf("%d" ,&choice );
 
@@ -408,7 +414,61 @@ else if(choice == 15){
     scanf("%d", &l);
     printf("%d", squareRoot(l));
 }
-
+else if(choice == 16){
+    printf("\nEnter your current EB reading :");
+    scanf("%f" , &newreading);
+    units = newreading-oldreading;
+    printf("\nTotal units : %.2f" , units);
+    if(units<=500){
+        if(units<=200){
+            printf("\nIt's completely free !");
+        }
+        else if(units>200&&units<=400){
+            newunit = units-200;
+            newunit*=4.70;
+            printf("\nBill = %.2f",newunit);
+        }
+        else if(units>400&&units<=500){
+            newunit = units-200;
+            newunit*=6.30;
+            printf("\nBill = %.2f",newunit);
+        }
+    }
+    else if(units>500){
+        if(units<=100){
+            printf("\nIt's completely free !");
+        }
+        else if(units>100&&units<=400){
+            newunit = units - 100;
+            newunit*=4.70;
+            printf("\nBill = %.2f",newunit);
+       }
+        else if(units>400&&units<=500){
+            newunit = units - 100;
+            newunit*=6.30;
+            printf("\nBill = %.2f",newunit);
+        }
+        else if(units>600&&units<=700){
+            newunit = units - 100;
+            newunit*=8.40;
+            printf("\nBill = %.2f",newunit);
+        }
+        else if(units>700&&units<=800){
+            newunit = units - 100;
+            newunit*=9.45;
+            printf("\nBill = %.2f",newunit);
+        }
+         else if(units>800&&units<=1000){
+            newunit = units - 100;
+            newunit*=10.50;
+            printf("\nBill = %.2f",newunit);
+        }
+}
+else if(units>1000){
+            units*=11.55;
+            printf("\nBill = %.2f",units);
+}
+}
 printf("\nDO YOU WANT TO USE IT AGAIN ? THEN ENTER 0 :");
 scanf("%d",&again);
 if(again == 0){
