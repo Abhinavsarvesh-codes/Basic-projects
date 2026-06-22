@@ -54,8 +54,8 @@ float newunit = 0;
 float oldreading =2313;
 float newreading = 0;
 bool result;
-
-
+int J = 0;
+int limit = 0;
 char* checkEvenOrOdd(int N) {
     if(N%2==0){
            return "even";      
@@ -190,6 +190,8 @@ printf("14.PRIME NUMBER\n");
 printf("15.SQUARE ROOT\n");
 
 printf("16.EB BILL GENERATOR \n");
+
+printf("17. MULTIPLICATION TABLE\n");
 
 scanf("%d" ,&choice );
 
@@ -468,6 +470,15 @@ else if(units>1000){
             units*=11.55;
             printf("\nBill = %.2f",units);
 }
+}
+else if(choice == 17){
+    printf("\nEnter the multiplication table number : ");
+    scanf("%d",&J);
+    printf("\nEnter the limit :");
+    scanf("%d",&limit);
+    for(int i = 1;i<=limit;i++){
+        printf(" %d x %d = %d\n " ,i,J,i*J);
+    }
 }
 printf("\nDO YOU WANT TO USE IT AGAIN ? THEN ENTER 0 :");
 scanf("%d",&again);
