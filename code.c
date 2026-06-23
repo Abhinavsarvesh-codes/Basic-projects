@@ -56,6 +56,7 @@ float newreading = 0;
 bool result;
 int J = 0;
 int limit = 0;
+int NUM = 0;
 char* checkEvenOrOdd(int N) {
     if(N%2==0){
            return "even";      
@@ -192,6 +193,8 @@ printf("15.SQUARE ROOT\n");
 printf("16.EB BILL GENERATOR \n");
 
 printf("17. MULTIPLICATION TABLE\n");
+
+printf("18.FACTOR FINDER\n");
 
 scanf("%d" ,&choice );
 
@@ -479,6 +482,16 @@ else if(choice == 17){
     for(int i = 1;i<=limit;i++){
         printf(" %d x %d = %d\n " ,i,J,i*J);
     }
+}
+else if(choice == 18){
+      printf("\nEnter a number :");
+    scanf("%d",&num);
+    printf("\nFactors of %d are" , num);
+for(int i=1;i<=num;i++){
+  if(num%i==0){
+    printf(" %d,", i);  
+    } 
+}
 }
 printf("\nDO YOU WANT TO USE IT AGAIN ? THEN ENTER 0 :");
 scanf("%d",&again);
