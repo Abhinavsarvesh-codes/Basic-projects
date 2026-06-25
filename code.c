@@ -57,6 +57,7 @@ bool result;
 int J = 0;
 int limit = 0;
 int NUM = 0;
+int numa = 1;
 char* checkEvenOrOdd(int N) {
     if(N%2==0){
            return "even";      
@@ -196,6 +197,9 @@ printf("17. MULTIPLICATION TABLE\n");
 
 printf("18.FACTOR FINDER\n");
 
+printf("19.THEATRE SEAT DESIGN\n");
+
+printf("20.NUM DESIGN IN FOR LOOP\n");
 scanf("%d" ,&choice );
 
 if(choice == 1 ){
@@ -493,6 +497,26 @@ for(int i=1;i<=num;i++){
     } 
 }
 }
+else if (choice == 19)
+{
+for(int i=1;i<=4;i++){
+    for(int j=65;j<=68;j++){
+        printf("%c%d ",j,i);
+    }
+    printf("\n");
+}
+}
+else if (choice == 20)
+{
+   for(int i=1;i<=4;i++){
+    for(int j=1;j<=i;j++){
+        printf("%d",numa);
+        numa++;
+    }
+    printf("\n");
+}
+}
+
 printf("\nDO YOU WANT TO USE IT AGAIN ? THEN ENTER 0 :");
 scanf("%d",&again);
 if(again == 0){
