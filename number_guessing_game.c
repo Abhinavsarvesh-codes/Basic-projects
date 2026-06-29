@@ -1,7 +1,9 @@
 #include<stdio.h>
+#include<time.h>
 int main(){
-    int num = 0;
+    int num = rand()%100+1;
     int guess = 0;
+    int attempts = 0;
 srand(time(0));
  
 printf("=======Welcome to number guessing game==========\n");
@@ -9,7 +11,7 @@ printf("=======Welcome to number guessing game==========\n");
  do{
 
 scanf("%d" , &guess);
-
+attempts++;
 if(num>guess){
  printf("It's low\n");
 
@@ -19,7 +21,7 @@ else if(num<guess){
 printf("It's high\n"); 
 }
  else{
-     printf("Your guess is wright ! It's %d \n" , num );
+      printf("Yes It's %d you have guessed the correct answer in %d attempts \n",num,attempts );
  };
 }
 while(num != guess);

@@ -348,10 +348,12 @@ srand(time(0));
  
 printf("=======Welcome to number guessing game==========\n");
  printf("guess a number between 1 to 100\n");
+ int num = rand()%100+1;
+ int attempts = 0;
  do{
 
 scanf("%d" , &guess);
-
+attempts++;
 if(num>guess){
  printf("It's low\n");
 
@@ -361,7 +363,7 @@ else if(num<guess){
 printf("It's high\n"); 
 }
  else{
-     printf("Your guess is wright ! It's %d \n" , num );
+     printf("Yes It's %d you have guessed the correct answer in %d attempts \n",num,attempts );
  };
 }
 while(num != guess);
