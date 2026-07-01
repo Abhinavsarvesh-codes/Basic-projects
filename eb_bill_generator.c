@@ -37,7 +37,7 @@ printf("\nEnter your current EB reading :");
             newunit*=6.30;
             printf("\nBill = %.2f",newunit);
         }
-        else if(units>600&&units<=700){
+        else if(units>500&&units<=700){
             newunit = units - 100;
             newunit*=8.40;
             printf("\nBill = %.2f",newunit);

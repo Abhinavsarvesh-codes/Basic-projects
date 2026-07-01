@@ -1,3 +1,1 @@
- printf("Enter a number :");
-    scanf("%d", &s);
-    printf("%s\n", isPrime(s) ? "True" : "False");
+ printf("Yes It's %d you have guessed the correct answer in %d attempts \n",num,attempts );
