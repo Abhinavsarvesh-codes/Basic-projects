@@ -1,16 +1,12 @@
-#include<stdio.h>
-int main(){
-FILE *fp;
-int phone=0;
-fp=fopen("Sample.txt","w");
-printf("\nEnter your phone number :");
-scanf("%d",&phone);
-fprintf(fp,"%d",phone);
-fclose(fp);
-fp=fopen("Sample.txt","r");
-fscanf(fp,"%d",&phone);
-printf("Your phone number: %d",phone);
-fclose(fp);
-    return 0;
+#include <stdio.h>
 
+int main() {
+for(int i=1;i<=4;i++){
+    for(int j=65;j<=68;j++){
+        printf("%c%d ",j,i);
+    }
+    printf("\n");
+}
+
+    return 0;
 }
