@@ -8,7 +8,6 @@ void leap_year_generator(){
     scanf("%d",&year1);
     printf("Enter the ending year :\n");
     scanf("%d",&year2);
-    printf("\t\t");
 for(int i=year1;i<=year2;i++){
     if(i%4==0){
         printf("%d\n",i);
